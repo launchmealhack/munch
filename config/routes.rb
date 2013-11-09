@@ -1,17 +1,20 @@
 Munch::Application.routes.draw do
-  devise_for :users
-  resources :users , only: [:show]
+  scope :api, defaults: {format: :json} do
+    devise_for :users
+    resources :users , only: [:show]
 
-  resources :friendships
+    resources :friendships
 
-  resources :reviews
+    resources :restaurants do
+      resources :meals, shallow: true do
+        resources :reviews, shallow: true
+      end
+    end
 
-  resources :meals
-
-
-  get "main/index"
+    
+    
+  end
   
-  resources :restaurants
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
