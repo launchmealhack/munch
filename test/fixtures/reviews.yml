@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  meal_id: 
+  user_id: 
+  vote: 1
+  price_paid: 9.99
+  content: MyText
+
+two:
+  meal_id: 
+  user_id: 
+  vote: 1
+  price_paid: 9.99
+  content: MyText

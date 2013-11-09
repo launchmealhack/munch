@@ -11,12 +11,83 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109063346) do
+ActiveRecord::Schema.define(version: 20131109084543) do
+
+  create_table "friendships", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friendships", ["friend_id"], name: "index_friendships_on_friend_id"
+  add_index "friendships", ["user_id"], name: "index_friendships_on_user_id"
+
+  create_table "meal_tastes", force: true do |t|
+    t.integer  "taste_id"
+    t.integer  "meal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meal_tastes", ["meal_id"], name: "index_meal_tastes_on_meal_id"
+  add_index "meal_tastes", ["taste_id"], name: "index_meal_tastes_on_taste_id"
+
+  create_table "meal_types", force: true do |t|
+    t.integer  "meal_id"
+    t.integer  "type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meal_types", ["meal_id"], name: "index_meal_types_on_meal_id"
+  add_index "meal_types", ["type_id"], name: "index_meal_types_on_type_id"
+
+  create_table "meals", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.float    "score"
+    t.integer  "restaurant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meals", ["restaurant_id"], name: "index_meals_on_restaurant_id"
 
   create_table "restaurants", force: true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.integer  "meal_id"
+    t.integer  "user_id"
+    t.integer  "vote"
+    t.decimal  "price_paid"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "reviews", ["meal_id"], name: "index_reviews_on_meal_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+
+  create_table "tastes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +105,10 @@ ActiveRecord::Schema.define(version: 20131109063346) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

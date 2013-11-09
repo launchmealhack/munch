@@ -1,0 +1,15 @@
+<%= simple_form_for(@review) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :meal %>
+    <%= f.association :user %>
+    <%= f.input :vote %>
+    <%= f.input :price_paid %>
+    <%= f.input :content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
