@@ -31,6 +31,8 @@ gem 'devise'
 
 gem 'simple_form'
 
+gem 'rails-footnotes', '>= 3.7.9', :group => :development
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
