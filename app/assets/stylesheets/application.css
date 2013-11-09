@@ -16,8 +16,10 @@
 #select_bar{
 	margin-top: 50px;
 }
-.meals_in{
+#meals_in{
 	text-align: center;
+	padding:0px;
+	width:70px;
 }
 .meals_in_font{
 	font-size: 120%;
