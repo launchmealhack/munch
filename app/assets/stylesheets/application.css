@@ -19,8 +19,7 @@
 #meals_in{
 	text-align: center;
 	padding:0px;
-	width:70px;
 }
-.meals_in_font{
+#meals_in_font{
 	font-size: 120%;
 }
