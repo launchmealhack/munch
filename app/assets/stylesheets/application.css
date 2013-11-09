@@ -11,3 +11,14 @@
  *= require_self
  *= require_tree .
  */
+
+
+#select_bar{
+	margin-top: 50px;
+}
+.meals_in{
+	text-align: center;
+}
+.meals_in_font{
+	font-size: 120%;
+}

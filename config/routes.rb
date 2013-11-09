@@ -1,4 +1,5 @@
 Munch::Application.routes.draw do
+  get "main/index"
   devise_for :users
   resources :restaurants
 
