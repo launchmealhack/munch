@@ -1,17 +1,9 @@
 
 <div class="content">
-	<div class="tile col-md-3">
-		<img class="img-responsive" src="http://placekitten.com/600/600" alt="cat">
-	</div>
-	<div class="tile col-md-3">
-		<img class="img-responsive" src="http://placekitten.com/600/600" alt="cat">
-	</div>
-	<div class="tile col-md-3">
-		<img class="img-responsive" src="http://placekitten.com/600/600" alt="cat">
-	</div>
-
-
-
-
+	<% @meals.each do |meal| %>
+		<div class='tile col-md-3'>
+			<img class="img-responsive" src="http://placekitten.com/600/600" alt="">
+		</div>
+	<% end %>
 </div>
 
