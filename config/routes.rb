@@ -1,4 +1,11 @@
 Munch::Application.routes.draw do
+  resources :users , only: [:show]
+  resources :friendships
+
+  resources :reviews
+
+  resources :meals
+
   get "main/index"
   devise_for :users
   resources :restaurants

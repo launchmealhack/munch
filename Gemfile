@@ -33,6 +33,10 @@ gem 'simple_form'
 
 gem 'rails-footnotes', '>= 3.7.9', :group => :development
 
+gem 'hirb'
+
+gem "paperclip", "~> 3.0"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
