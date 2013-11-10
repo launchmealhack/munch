@@ -2,27 +2,27 @@
 <html>
 <head>
   <title>Munch</title>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 <body>
 	<div class="container">
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<button id="menu" class = "pull-left" data-toggle = "collapse" data-target =".navHeaderCollapse">
-				<span class = "glyphicon glyphicon-th-list"></span>
+			<button id="menu" class = "btn btn-md btn-primary pull-left" data-toggle = "collapse" data-target =".navHeaderCollapse">
+				<span class = "menu_icon glyphicon glyphicon-th-list"></span>
 			</button>
-			<h4 id="title" class="pull-left"><strong><a href="/videos/welcome">MUNCH </a></h4>
-			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>		
+			<h4 id="title" class="pull-left"><strong>MUNCH</h4>
+			<p class="sign_out pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>		
 		</nav>
 		<div id="sidr">
 			<ul>
-				<li>one</li>
-				<li>two</li>
-				<li>three</li>
+				<li>TASTE BUD</li>
+				<li>MAP</li>
+				<li>SETTING</li>
 			</ul>
 		</div>
 

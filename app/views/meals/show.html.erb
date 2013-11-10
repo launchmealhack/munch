@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
-  <div class="col-md-6 col-md-push-3 meal_profile">
-  <%= link_to 'Edit', edit_meal_path(@meal) %> |
-  <%= link_to 'Back', :back %>
+  <div class="col-md-12" style="border: 1px solid black">
+    <p id="notice"><%= notice %></p>
+    <div class="col-md-6 meal_profile">
+    <%= link_to 'Edit', edit_meal_path(@meal) %> |
+    <%= link_to 'Back', :back %>
+
     <div>
     <img class='img-responsive' src='http://placekitten.com/600/600' alt=''>
       <p>
@@ -12,12 +14,23 @@
     </div>
 
     <div class="rate col-md-12">
-      <button type="button" class="col-md-6 btn btn-success btn-lg">
-        <span class="meal_thumb glyphicon glyphicon-thumbs-up"></span>
-      </button>
-      <button type="button" class="col-md-6 btn btn-danger btn-lg">
-        <span class="meal_thumb glyphicon glyphicon-thumbs-down"></span>
-      </button>
+      <form class="rate_vote" action="/reviews" method="post" id="vote">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <!-- <input type="submit" class="col-md-6 col-xs-6 btn btn-success btn-lg meal_thumb glyphicon glyphicon-thumbs-up">
+        <input type="submit" class="col-md-6 col-xs-6 btn btn-success btn-lg meal_thumb glyphicon glyphicon-thumbs-down"> -->
+        <button type="button" id="up" class="col-md-6 col-xs-6 btn btn-success btn-lg">
+          <span class="meal_thumb glyphicon glyphicon-thumbs-up"></span>
+        </button>
+        <button type="button" id="down" class="col-md-6 col-xs-6 btn btn-danger btn-lg">
+          <span class="meal_thumb glyphicon glyphicon-thumbs-down"></span>
+        </button>
+      </form>
+      <form action="/reviews" method="post" id="review_form_container">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <label for="review_form">Tell us about your experience...</label><br>
+        <textarea name="user_review" id="review_form"></textarea>
+        <input type="submit" value="Add Review" class="btn btn-primary btn-sm pull-right">
+      </form>
     </div>
 
     
@@ -47,7 +60,31 @@
         
       </p>
     </div>
-    
-
-
-</div>
+    </div>
+    <div class="col-md-6">
+      <div class="review">
+        <img src="http://placekitten.com/60/60" alt="schmuck">
+        <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+        <span class="review_name">Buster Bluth (11/9/2013)</span>
+        <p>And with deep, deep concentration and, and great focus, he's often able to achieve an erect– I don't want no part of yo tight-ass country club, ya freak bitch! George Michael, you want to put your head down there by his drainage shunt? Fried cheese… with club sauce. Popcorn shrimp… with club sauce. Chicken fingers… with spicy club sauce.</p>
+      </div>
+      <div class="review">
+        <img src="http://placekitten.com/60/60" alt="schmuck">
+        <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+        <span class="review_name">Buster Bluth (11/9/2013)</span>
+        <p>And with deep, deep concentration and, and great focus, he's often able to achieve an erect– I don't want no part of yo tight-ass country club, ya freak bitch! George Michael, you want to put your head down there by his drainage shunt? Fried cheese… with club sauce. Popcorn shrimp… with club sauce. Chicken fingers… with spicy club sauce.</p>
+      </div>
+      <div class="review">
+        <img src="http://placekitten.com/60/60" alt="schmuck">
+        <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+        <span class="review_name">Buster Bluth (11/9/2013)</span>
+        <p>And with deep, deep concentration and, and great focus, he's often able to achieve an erect– I don't want no part of yo tight-ass country club, ya freak bitch! George Michael, you want to put your head down there by his drainage shunt? Fried cheese… with club sauce. Popcorn shrimp… with club sauce. Chicken fingers… with spicy club sauce.</p>
+      </div>
+      <div class="review">
+        <img src="http://placekitten.com/60/60" alt="schmuck">
+        <span class="glyphicon glyphicon-thumbs-up pull-right"></span>
+        <span class="review_name">Buster Bluth (11/9/2013)</span>
+        <p>And with deep, deep concentration and, and great focus, he's often able to achieve an erect– I don't want no part of yo tight-ass country club, ya freak bitch! George Michael, you want to put your head down there by his drainage shunt? Fried cheese… with club sauce. Popcorn shrimp… with club sauce. Chicken fingers… with spicy club sauce.</p>
+      </div>
+    </div>
+  </div>

@@ -13,7 +13,7 @@
  */
 
 body { 
-	padding-top: 50px; 
+	padding-top: 50px;
 }
 #select_bar{
 	margin-top: 50px;
@@ -25,3 +25,19 @@ body {
 #meals_in_font{
 	font-size: 120%;
 }
+#title strong{
+	font-size: 150%;
+}
+#menu{
+  margin-right: 20px;
+}
+  .menu_icon{
+    font-size: 180%;
+  }
+  .sign_out{
+  	margin: 10px 10px;
+  	font-size: 120%;
+  }
+a:hover{
+  text-decoration: none;
+};

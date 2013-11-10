@@ -15,11 +15,13 @@ class MealsController < ApplicationController
   end
 
   def show
+
   end
 
   # GET /meals/new
   def new
     @meal = Meal.new
+    @review = Review.find(params[:meal_id])
   end
 
   # GET /meals/1/edit

@@ -9,6 +9,29 @@
 	font-size: 300%;
 }
 
+/*SHOW MEAL PAGE*/
+.review_form_container{
+  border: 1px solid black;
+}
+  #review_form{
+    height: 100px;
+    width: 100%;
+  }
+.review{
+  border: 1px solid black;
+  padding: 5px;
+}
+  .review img {
+    display: inline-block;
+  }
+  .review_name{
+    vertical-align: top;
+  }
+  .review p{
+    font-weight: normal;
+    margin-left: 70px;
+  }
+
 
 /*LOCATE ALL MAP MEALS*/
 #locate_all_input{
