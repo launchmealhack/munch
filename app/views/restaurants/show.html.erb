@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', :back %>
+
+
+<div>
+    <img class='img-responsive' src='http://placekitten.com/1200/300' alt=''>
+      <p>
+        <strong>Name:</strong>
+        <%= @restaurant.name %>
+        <span id="upvotes" data-upvotes="98">98</span>
+      </p>
+</div>
 
 <p>
   <strong>Address:</strong>
@@ -15,5 +23,20 @@
   <%= @restaurant.phone %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<div>
+	<% Restaurant.find(@restaurant.id).meals.each do |meal| %>
+	<div class="flip col-md-4"> 
+        <%= link_to 'MORE', meal_path(meal) %>
+        <div class='card'> 
+            <div class='face front' id='<%= meal.id %>' data-toggle='modal' data-target='#myModal'> 
+                <img class='img-responsive' src='http://placekitten.com/600/600' alt=''>
+            </div> 
+            <div class='face back'> 
+                <img class='img-responsive' src='http://placekitten.com/600/600' alt=''>
+            </div> 
+			<span class='arrow glyphicon glyphicon-arrow-down'></span>
+		</div>
+    </div> 
+    <% end %>
+
+</div>

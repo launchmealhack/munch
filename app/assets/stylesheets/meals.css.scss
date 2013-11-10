@@ -1,3 +1,48 @@
 // Place all the styles related to the meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.meal_map{
+  	width:100%;
+  	height:200px;
+  }
+.meal_thumb{
+	font-size: 300%;
+}
+
+
+/*LOCATE ALL MAP MEALS*/
+#locate_all_input{
+	text-align: center;
+}
+
+  .locate_all_gmap3{
+    margin: 20px auto;
+    border: 1px dashed #C0C0C0;
+    width: auto;
+    height: 500px;
+  }
+  .cluster{
+			color: #FFFFFF;
+			text-align:center;
+			font-family: 'Arial, Helvetica';
+			font-size:11px;
+			font-weight:bold;
+  }
+  .cluster-1{
+    background-image:url(maps/m1.png);
+    line-height:53px;
+			width: 53px;
+			height: 52px;
+  }
+  .cluster-2{
+    background-image:url(maps/m2.png);
+    line-height:53px;
+			width: 56px;
+			height: 55px;
+  }
+  .cluster-3{
+    background-image:url(maps/m3.png);
+    line-height:66px;
+			width: 66px;
+			height: 65px;
+  }

@@ -12,7 +12,9 @@
  *= require_tree .
  */
 
-
+body { 
+	padding-top: 50px; 
+}
 #select_bar{
 	margin-top: 50px;
 }

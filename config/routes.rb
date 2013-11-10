@@ -1,4 +1,6 @@
 Munch::Application.routes.draw do
+  get "/meals/map", to:'meals#map'
+
   devise_for :users
   resources :users , only: [:show]
 
@@ -8,9 +10,8 @@ Munch::Application.routes.draw do
 
   resources :meals
 
-
   get "main/index"
-  
+ 
   resources :restaurants
   
   # The priority is based upon order of creation: first created -> highest priority.

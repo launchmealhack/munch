@@ -9,6 +9,11 @@ class MealsController < ApplicationController
 
   # GET /meals/1
   # GET /meals/1.json
+
+  def map 
+    @meals_address_array = Restaurant.all.select('address')
+  end
+
   def show
   end
 
@@ -20,6 +25,8 @@ class MealsController < ApplicationController
   # GET /meals/1/edit
   def edit
   end
+
+
 
   # POST /meals
   # POST /meals.json

@@ -1,29 +1,53 @@
 <p id="notice"><%= notice %></p>
+  <div class="col-md-6 col-md-push-3 meal_profile">
+  <%= link_to 'Edit', edit_meal_path(@meal) %> |
+  <%= link_to 'Back', :back %>
+    <div>
+    <img class='img-responsive' src='http://placekitten.com/600/600' alt=''>
+      <p>
+        <strong>Name:</strong>
+        <%= @meal.name %>
+        <span id="upvotes" data-upvotes="98">98</span>
+      </p>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @meal.name %>
-</p>
+    <div class="rate col-md-12">
+      <button type="button" class="col-md-6 btn btn-success btn-lg">
+        <span class="meal_thumb glyphicon glyphicon-thumbs-up"></span>
+      </button>
+      <button type="button" class="col-md-6 btn btn-danger btn-lg">
+        <span class="meal_thumb glyphicon glyphicon-thumbs-down"></span>
+      </button>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @meal.description %>
-</p>
+    
+    <div class='meal_map'>
+    </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @meal.price %>
-</p>
+    <div>
+      <p>
+        <strong>Description:</strong>
+        <%= @meal.description %>
+      </p>
 
-<p>
-  <strong>Score:</strong>
-  <%= @meal.score %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= @meal.price %>
+      </p>
 
-<p>
-  <strong>Restaurant:</strong>
-  <%= @meal.restaurant %>
-</p>
+      <p>
+        <strong>Score:</strong>
+        <%= @meal.score %>
+      </p>
 
-<%= link_to 'Edit', edit_meal_path(@meal) %> |
-<%= link_to 'Back', meals_path %>
+
+
+      <p>
+        <strong>Restaurant:</strong><%= link_to @meal.restaurant, restaurant_path %>
+        
+      </p>
+    </div>
+    
+
+
+</div>

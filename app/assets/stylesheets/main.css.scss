@@ -8,3 +8,55 @@
 .tile{
 
 }
+.arrow{
+	border:1px solid black;
+	font-size: 30px;
+	z-index: 10;
+}
+
+/*=======FLIP CSS BEGIN=======*/
+body {
+ background: #ccc;   
+}
+.flip {
+  -webkit-perspective: 800;
+	width: auto;
+   	height: 600px;
+    position: relative;
+   /* margin: 0px auto;*/
+}
+.flip .card.flipped {
+	z-index:-1;
+  -webkit-transform: rotatex(-180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: Georgia;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+}
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+
+    color: white;
+    cursor: pointer;
+}
+.flip .card .back {
+  -webkit-transform: rotatex(-180deg);
+    color: black;
+    cursor: pointer;
+}
+/*=====FLIP END=====*/
+
